@@ -1,0 +1,251 @@
+{
+  "form" :{
+    "size": {
+      "40x50": "50",
+      "50x70": "100",
+      "70x70":"150",
+      "70x100":"200"
+    },
+    "material": {
+      "Холст из волокна":"1",
+      "Льняной холст":"1.1",
+      "Холст из натурального хлопка":"1.3"
+    },
+    "options":{
+      "Покрытие арт-гелем":"10",
+      "Экспресс-изготовление":"50",
+      "Доставка готовых работ ":"20"
+
+    }
+
+
+  },
+  "styles": [
+    {
+      "src": "assets/img/styles-5.jpg",
+      "title": "Пастелью",
+      "link": "#pastel"
+    },
+    {
+      "src": "assets/img/styles-6.jpg",
+      "title": "Поп-арт",
+      "link": "#popart"
+    },
+    {
+      "src": "assets/img/styles-7.png",
+      "title": "Фотомозаика",
+      "link": "#mozaika"
+    },
+    {
+      "src": "assets/img/styles-8.jpg",
+      "title": "Шарж",
+      "link": "#sharj"
+    }
+  ],
+  "design": [
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "2212331",
+      "email": "shubina2011@ukr.net",
+      "message": "",
+      "id": 1
+    },
+    {
+      "upload": {},
+      "id": 2
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23123",
+      "email": "sanos59281@mado34.com",
+      "message": "",
+      "id": 3
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 4
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23232",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 5
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23123",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 6
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "2212331",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 7
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23232",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 8
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 9
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "2212331",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 10
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23232",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 11
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 12
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 13
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23232",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 14
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "23232",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 15
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "",
+      "id": 16
+    },
+    {
+      "upload": {},
+      "id": 17
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23232",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 18
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23123",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "qs",
+      "id": 19
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23232",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "as",
+      "id": 20
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "sdasd",
+      "id": 21
+    },
+    {
+      "upload": {},
+      "name": "dsfsdf",
+      "phone": "23232",
+      "email": "vowa.kononenko@gmail.com",
+      "message": "sadsd",
+      "id": 22
+    },
+    {
+      "upload": {},
+      "name": "vovanelo",
+      "phone": "23123",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "as",
+      "id": 23
+    },
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23232",
+      "email": "shubina2011@ukr.net",
+      "message": "sda",
+      "id": 24
+    }
+  ],
+  "question": [
+    {
+      "upload": {},
+      "name": "dfdf",
+      "phone": "23123",
+      "email": "vowa.kononenko@yandex.ua",
+      "message": "",
+      "id": 1
+    },
+    {
+      "name": "dsfsdf",
+      "phone": "2212331",
+      "id": 2
+    },
+    {
+      "name": "dfdf",
+      "phone": "23232",
+      "id": 3
+    }
+  ]
+}
