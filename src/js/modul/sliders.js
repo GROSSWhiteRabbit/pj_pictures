@@ -66,12 +66,10 @@
     
     slides[0].parentNode.addEventListener('mouseenter', ()=>{
         clearInterval(timerSlider);
-        console.log('mouseenter');
     });
 
     slides[0].parentNode.addEventListener('mouseleave', ()=>{
         timerSlider = setInterval(nextSlide, 3000);
-        console.log('mouseout');
     });
 
     if(dir == 'vertical') {

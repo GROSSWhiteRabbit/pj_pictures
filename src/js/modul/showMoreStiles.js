@@ -54,7 +54,6 @@ const showMoreStiles = (trigerSelect,)=>{
         });
         
         
-        // console.log(getData('http://localhost:3000/styles'));
     });
 
     

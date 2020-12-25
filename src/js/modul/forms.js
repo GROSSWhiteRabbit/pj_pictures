@@ -17,11 +17,9 @@ import {postData} from '../services/requests';
         // form.user_phone.addEventListener('input', ()=>{
         //     form.user_phone.value =  form.user_phone.value.replace(/\D/g, '');
         // });
-        console.log(upload);
         upload.forEach((item)=>{
             item.addEventListener('input', ()=>{
                 let  name = item.files[0].name;
-                console.log(name.length);
                 if(name.length > 9) {
                   name = name.replace(/(?<=\w{7})\w+/ig, '..') ;
                 }
@@ -34,7 +32,7 @@ import {postData} from '../services/requests';
             e.preventDefault();
                 const data = new FormData(form),
                 textStatus = document.createElement('img'),
-                path = {design:'assets/server.php', question:'assets/server.php'};
+                path = {design:'assets/serverFiles.php', question:'assets/server.php', files:'assets/serverFiles.php'};
                 textStatus.style.margin = 'auto';
                 textStatus.style.display = 'block';
                 textStatus.classList.add('status');
@@ -43,7 +41,7 @@ import {postData} from '../services/requests';
 
                 let api;
 
-                form.closest('.popup-consultation') ? api = path.question: api = path.design;
+                api = (form.id==='formCalc')?path.files:form.closest('.popup-design') ? path.design:path.question ;
                 postData(api, data)
                 .then(function(res) {
                     console.log(res);

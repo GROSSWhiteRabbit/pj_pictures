@@ -15,7 +15,6 @@ const drop = () => {
     function preventDefault(e){
         e.preventDefault();
         e.stopPropagation ();
-        // console.log(e); 
     }
     
     ['dragenter', 'dragover', 'drag'].forEach(nameEvent => {
@@ -25,7 +24,6 @@ const drop = () => {
     });
     
     function highLight(item) {
-        console.log('highLight');
         item.parentNode.style.border = '5px solid #c51abb';
         item.parentNode.style.backgroundColor = 'rgba(178, 80, 188, 0.8)';
 
@@ -38,7 +36,6 @@ const drop = () => {
     });
 
     function unHighLight(item) {
-        console.log('unHighLight');
         item.parentNode.style.border = '';
         item.parentNode.style.backgroundColor = '';
 
@@ -48,9 +45,7 @@ const drop = () => {
         input.addEventListener('drop', (e)=> {
 
             input.files = e.dataTransfer.files;
-            console.log(input.files);
             let  name = input.files[0].name;
-                console.log(name);
                 if(name.length > 9) {
                   name = name.replace(/(?<=\w{7})\w+/ig, '..') ;
                 }

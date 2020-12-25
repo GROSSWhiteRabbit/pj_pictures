@@ -2,7 +2,6 @@ const showImg =  () => {
     const bloks = document.querySelectorAll('.sizes-block');
 
     bloks.forEach(blok => {
-        console.log('block oks');
         blok.addEventListener('mouseenter', function(){
             this.children.forEach((elem, i) => {
                 if(elem.tagName == "IMG") {

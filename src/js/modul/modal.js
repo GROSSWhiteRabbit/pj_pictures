@@ -107,7 +107,6 @@ const modals = ()=> {
         close.addEventListener('click', function(e) {
             if(e.target) {
                 e.preventDefault();
-                console.log('ok');
                 closeModal(selectorModal);
                 setTimer();
             }
@@ -135,7 +134,7 @@ const modals = ()=> {
         if (openByEndScroll) {
             window.addEventListener('scroll', ()=> {
                 if(!btnPressed &&
-                (window.pageYOffset + document.documentElement.clientHeight >=
+                (Math.round(window.pageYOffset + document.documentElement.clientHeight)  >=
                 document.documentElement.offsetHeight)){
         
                     showModal(selectorModal);

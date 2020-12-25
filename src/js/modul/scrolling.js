@@ -1,103 +1,59 @@
-const  scrolling = () => {
-   const  hashTrigers = document.querySelectorAll('[href^="#"]'),
-          element  = document.documentElement,
-          scrollUp = document.querySelector('[href="#up"]');
+const  scrolling = (triggerSelector,elementSelector,upHidden=false) => {
+   const  element  = document.documentElement,
+          scrollUp = triggerSelector.tagName? triggerSelector: document.querySelector(triggerSelector);
 
-    hashTrigers.forEach(triger => {
-        triger.addEventListener('click', function(e){
-            if (this.hash != '') {
+    if(upHidden){
+        scrollUp.style.opacity = '0';
+        scrollUp.style.transition = 'opacity 1s';
+        
+        window.addEventListener('scroll', function(e) {
+            if (element.scrollTop > 1650) { //1650 Высота где появляется тригер
+                scrollUp.style.opacity = '1';
+    
+            } else {
+                scrollUp.style.opacity = '0';
+        }
+        });
+    }
+    
+    
+    
+    
+
+    scrollUp.addEventListener('click', function(e){
+            if (typeof(elementSelector)== 'string') {
                 e.preventDefault();
                 requestAnimationFrame(smoothScrollAnimation);
             }
             const startScrollTop =  Math.round(document.body.scrollTop || element.scrollTop);
-            const hashElemTop = Math.round(document.querySelector(this.hash).getBoundingClientRect().top);
+            const elemTop = Math.round(document.querySelector(elementSelector).getBoundingClientRect().top);
             const duration = 1000; //miliseconds
             let startDate;
 
-            
+            //Всю анимацию можно заменить просто на element.scrollTo(0, elemTop), 
+            //тогда страничка просто прыгнет до нужного места
             function smoothScrollAnimation(time) {
                     if(!startDate) {
                         startDate = time;
                     }
                     const lineProgress = (time - startDate)/duration;
                     const progress = lineProgress**3+3*lineProgress**2*(1-lineProgress);
-                    // const r  = Math.round(hashElemTop > 0 ? Math.min(startScrollTop + progress*speed, startScrollTop + hashElemTop) 
-                    //            : Math.max(startScrollTop - progress*speed, startScrollTop + hashElemTop));
+                    // const r  = Math.round(elemTop > 0 ? Math.min(startScrollTop + progress*speed, startScrollTop + elemTop) 
+                    //            : Math.max(startScrollTop - progress*speed, startScrollTop + elemTop));
 
-                    const r = Math.round(startScrollTop + hashElemTop*progress);
+                    const r = Math.round(startScrollTop + elemTop*progress);
                     element.scrollTo(0, r);
                     
                     if(lineProgress <= 1) {
                         requestAnimationFrame(smoothScrollAnimation);
                         
-                    } else {
-                        location.hash = triger.hash;
-                    }
+                    } 
             }
             
-        });
+        
     });
 
-    window.addEventListener('scroll', function(e) {
-        if (element.scrollTop > 1650) {
-            scrollUp.classList.add('animated', 'fadeIn');
-            scrollUp.classList.remove('fadeOut');
-    
-        } else {
-            scrollUp.classList.add('fadeOut');
-            scrollUp.classList.remove('fadeIn');
-        }
-    });
-
-    // for older browsers
-  
-
-//    scrollUp.addEventListener('click', function(e){
-//             if (this.hash != '') {
-//                 e.preventDefault();
-//                const hashElemTop = calcTopElem(document.querySelector(this.hash)),
-//                      startElementTop =  Math.round(document.body.scrollTop || element.scrollTop);
-//                 smoothScroll(hashElemTop, startElementTop, this );
-
-//             }
-
-//             function calcTopElem(elem) {
-//                 let elemTop = 0,
-//                     curentElem =  elem;
-//                 while(curentElem.offsetParent) {
-//                     elemTop =+ curentElem.offsetTop;
-//                     curentElem = curentElem.offsetParent;
-//                 }
-//                 return elemTop;
-//            }
-//            function smoothScroll(to, from, elem) {
-//                const interval = 1;
-//                let speed,
-//                     top = from;
-
-//                if (to > from) {
-//                    speed = 30;
-//                } else {
-//                    speed = -30;
-//                }
-//                const scrollTimer = setInterval(() => {
-//                    console.log(top, to, from);
-//                 if ((top==to)||(to > from && top >= to)||(to < from && top <= to)){
-//                     clearInterval(scrollTimer);
-//                     history.replaceState(history.state, document.title, location.href.replace(/#.*$/g, '') + elem.hash );
-
-//                 } else {
-//                     document.body.scrollTop = top + speed;
-//                     element.scrollTop = top + speed;  
-//                     top +=speed;
-//                 }
-//                }, interval);
-//            }
-
-//    });
    
-
-
 };
 
 
